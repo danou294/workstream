@@ -1,0 +1,20 @@
+<div class="login-wrapper">
+  <h1 class="login-title">Formulaire de connexion</h1>
+  <form [formGroup]="loginForm" class="login-form" (ngSubmit)="seConnecter()">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="username" id="username" placeholder="Username" formControlName="username">
+      <div *ngIf="isSubmitted && formControls.username.errors" class="form-error">
+        <div *ngIf="formControls.username.errors.required">L'username est requis</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Password" formControlName="password">
+      <div *ngIf="isSubmitted && formControls.password.errors" class="form-error">
+        <div *ngIf="formControls.password.errors.required">Mot de passe requis</div>
+      </div>
+    </div>
+    <button type="submit" class="login-button">Se connecter</button>
+  </form>
+</div>

@@ -1,0 +1,12 @@
+<form [formGroup]="employeeForm" (ngSubmit)="updateEmployee()">
+  <label>Prénom :</label>
+  <input type="text" formControlName="firstname">
+  <br>
+  <label>Nom de famille :</label>
+  <input type="text" formControlName="lastname">
+  <br>
+  <label>Adresse email :</label>
+  <input type="email" formControlName="email">
+  <br>
+  <button type="submit">Mettre à jour</button>
+</form>

@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+mat-card {
+  width: 50%;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.titre h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 32px;
+  color: #212121;
+  text-align: center;
+  margin: 16px;
+}
+
+.titre h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 26px;
+  color: #212121;
+  text-align: center;
+  margin: 16px;
+}
+
+.btn-login {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  width: 120px;
+  height: 36px;
+  border-radius: 4px;
+  margin: 8px;
+  transition: all 0.3s;
+}
+
+.btn-login:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
