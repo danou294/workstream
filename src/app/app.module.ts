@@ -16,7 +16,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { AdminComponent } from './admin/admin.component';
 import { AjoutEmployeComponent } from './ajout-employe/ajout-employe.component';
-import { UpdateEmployeeComponent } from './update-employee/update-employee.component'
+import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
+import { DeleteEmployeComponent } from './delete-employe/delete-employe.component'
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { UpdateEmployeeComponent } from './update-employee/update-employee.compo
     AdminComponent,
     AjoutEmployeComponent,
     UpdateEmployeeComponent,
+    DeleteEmployeComponent,
   ],
   imports: [
     HttpClientModule,

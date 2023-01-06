@@ -44,5 +44,8 @@ export class EmployeesService {
     return this.HttpClient.get(`${this.apiUrl}/${id}`);
   }
 
-
+deleteEmployeeById(id: number){
+  // Envoie une requête DELETE à l'URL http://localhost:3000/employees/{id} pour supprimer l'employé
+  this.HttpClient.delete(`http://localhost:3000/employees/${id}`).subscribe();
+}
 }

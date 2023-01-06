@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
               private UserService: UserService,
               private router: Router, private formBuilder: FormBuilder,
 
-              ) { }
+  ) { }
   ngOnInit() {
     this.UserService.getUsers().subscribe( UserArray => {
       this.UserArray = UserArray
@@ -39,10 +39,8 @@ export class LoginComponent implements OnInit {
   }
   get formControls() { return this.loginForm.controls; }
   seConnecter(){
-    console.log('le form' + this.loginForm.value);
     this.isSubmitted = true;
     if(this.loginForm.invalid){
-      alert('identifiant incorrect merci de bien vouloir reesayer');
       return;
     }
     this.authService.Login(this.loginForm.value, this.UserArray);

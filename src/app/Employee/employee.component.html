@@ -20,10 +20,14 @@
     <td>{{ employee.age }}</td>
     <td>
       <!-- Bouton de modification de l'employé -->
-      <button [routerLink]="['/Employee-modif', employee.id]">Modifier</button>
+      <button class="btn-modify" [routerLink]="['/Employee-modif', employee.id]">Modifier</button>
+    </td>
+    <td>
+      <!-- Bouton de Suppression de l'employé -->
+      <button class="btn-modify" [routerLink]="['/Employee-delete/', employee.id]">Supprimer</button>
     </td>
   </tr>
   </tbody>
 </table>
 <!-- Bouton d'ajout d'employé -->
-<button [routerLink]="['/Employee-ajout']">Ajouter</button>
+<button class="btn-add" [routerLink]="['/Employee-ajout']">Ajouter un employe</button>

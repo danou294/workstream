@@ -14,24 +14,11 @@ export class UserService {
     private HttpClient: HttpClient,
   ) {}
 
-  getUsers(){
-    return new Observable<User[]>((observer ) => {
-      this.HttpClient.get('http://localhost:3000/users', {withCredentials: true}).subscribe((result: any) => {
-        const users = []
-        for (const jsonUserList of result){
-          const user = new User()
-          user.loadFromJson(jsonUserList)
-          users.push(user)
-        }
-        observer.next(users)
-        observer.complete()
-      }, error => {
-        observer.error(error);
-        observer.complete()
-      })
-    });
-  }
 
+
+  getUsers() {
+    return this.HttpClient.get<User[]>('http://localhost:3000/users')
+  }
 
 
   }

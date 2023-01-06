@@ -1,39 +1,47 @@
 table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 14px;
-  color: #212121;
+  border-collapse: collapse; /* Supprime les bordures doubles */
+  width: 100%; /* Remplit toute la largeur disponible */
 }
 
-thead th {
-  text-align: left;
-  background-color: #e0e0e0;
-  border: 1px solid #bdbdbd;
-  padding: 12px;
+th, td {
+  text-align: left; /* Aligne le texte à gauche */
+  padding: 0.5rem; /* Ajoute un peu de marge à l'intérieur des cellules */
+  border: 1px solid #ccc; /* Ajoute une bordure grise autour de chaque cellule */
 }
 
-tbody td {
-  border: 1px solid #bdbdbd;
-  padding: 12px;
+th {
+  background-color: #eee; /* Fond gris clair pour les en-têtes de colonnes */
 }
 
-tbody tr:nth-child(even) {
-  background-color: #f5f5f5;
+/* Styles pour les boutons "Ajouter" et "Modifier" */
+.btn-add {
+  display: block; /* Affiche le bouton sur une ligne à part entière */
+  width: 100%; /* Remplit toute la largeur disponible */
+  padding: 0.75rem 1rem; /* Ajoute un peu de marge à l'intérieur du bouton */
+  background-color: #28a745; /* Couleur verte */
+  color: #fff; /* Texte blanc */
+  font-weight: bold; /* Texte en gras */
+  border: none; /* Supprime la bordure */
+  border-radius: 0.25rem; /* Ajoute un peu d'arrondi aux coins */
+  cursor: pointer; /* Change le curseur de la souris lorsqu'on passe dessus */
 }
 
-@media (max-width: 600px) {
-  thead {
-    display: none;
-  }
-  tbody td {
-    display: block;
-    border: none;
-    text-align: right;
-  }
-  tbody td:before {
-    content: attr(data-label);
-    display: inline-block;
-    font-weight: bold;
-    width: 60%;
-  }
+.btn-add:hover {
+  background-color: #218838; /* Couleur légèrement plus foncée lorsque la souris passe dessus */
+}
+
+.btn-modify {
+  display: block; /* Affiche le bouton sur une ligne à part entière */
+  width: 100%; /* Remplit toute la largeur disponible */
+  padding: 0.75rem 1rem; /* Ajoute un peu de marge à l'intérieur du bouton */
+  background-color: #fd7e14; /* Couleur orange */
+  color: #fff; /* Texte blanc */
+  font-weight: bold; /* Texte en gras */
+  border: none; /* Supprime la bordure */
+  border-radius: 0.25rem; /* Ajoute un peu d'arrondi aux coins */
+  cursor: pointer; /* Change le curseur de la souris lorsqu'on passe dessus */
+}
+
+.btn-modify:hover {
+  background-color: #e36209; /* Couleur légèrement plus foncée lorsque la souris passe dessus */
 }

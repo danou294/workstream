@@ -4,7 +4,8 @@
   </div>
   <div class="menu">
     <a class="menu-item" routerLink="/Employee" routerLinkActive="active" ariaCurrentWhenActive="page">Employee</a>
-    <a class="menu-item" routerLink="/Login" routerLinkActive="active" ariaCurrentWhenActive="page">Login</a>
+    <a  *ngIf="!token" class="menu-item" routerLink="/Login" routerLinkActive="active" ariaCurrentWhenActive="page">Login</a>
+    <a  *ngIf="token" class="menu-item" routerLink="/Login" routerLinkActive="active" ariaCurrentWhenActive="page">Logout</a>
   </div>
 </div>
 

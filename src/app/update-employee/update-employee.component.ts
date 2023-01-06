@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { EmployeesService } from '../../services/EmployeesService/employees.service';
 import {EmployePut} from "../../models/EmployePut/employe-put";
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -16,11 +17,12 @@ export class UpdateEmployeeComponent implements OnInit {
   employeeId!: any;
 
   constructor(private route: ActivatedRoute,
+              private router: Router,
               @Inject(FormBuilder) private formBuilder: FormBuilder,
               private ES : EmployeesService ) {
     this.employeeForm = this.formBuilder.group({
-      first_name: new FormControl(''),
-      last_name: new FormControl(''),
+      firstname: new FormControl(''),
+      lastname: new FormControl(''),
       email: new FormControl('')
     });
     this.employeeId = '';
@@ -42,6 +44,8 @@ export class UpdateEmployeeComponent implements OnInit {
     this.ES.updateEmployee(this.employeeId, this.employeeForm.value as EmployePut).subscribe( // Modifiez le type du second argument
       (response) => {
         console.log(response);
+        alert('L\'employé a été ajouté avec succès !');
+        this.router.navigate(['/Employee']);
         // Affichez un message de confirmation de mise à jour réussie et redirigez l'utilisateur vers la page de listing des employés
       },
       (error) => {

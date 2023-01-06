@@ -8,6 +8,7 @@ import {AdminComponent} from "./admin/admin.component";
 import {LoginGuard} from "./Guard/GuardAdmin/login.guard";
 import {AjoutEmployeComponent} from "./ajout-employe/ajout-employe.component";
 import {UpdateEmployeeComponent} from "./update-employee/update-employee.component";
+import {DeleteEmployeComponent} from "./delete-employe/delete-employe.component";
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'Employee', component: EmployeeComponent, canActivate:[LoginGuard] },
   { path: 'Employee-ajout', component: AjoutEmployeComponent, canActivate:[LoginGuard] },
   { path: 'Employee-modif/:id', component: UpdateEmployeeComponent, canActivate:[LoginGuard] },
+  { path: 'Employee-delete/:id', component: DeleteEmployeComponent, canActivate:[LoginGuard] },
 ];
 
 @NgModule({
