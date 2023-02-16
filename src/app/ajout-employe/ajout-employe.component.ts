@@ -18,9 +18,9 @@ export class AjoutEmployeComponent {
 
   ngOnInit() {
     this.employeeForm = this.formBuilder.group({
-      firstname: new FormControl('Prénom par défaut'),
-      lastname: new FormControl('Nom par défaut'),
-      email: new FormControl('email@par.defaut')
+      first_name: new FormControl(''),
+      last_name: new FormControl(''),
+      email: new FormControl('')
     });
   }
 
